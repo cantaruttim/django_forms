@@ -36,7 +36,12 @@ def produto(request):
             print(f'Estoque: {prod.estoque}')
             print(f'Imagem: {prod.imagem}')
 
-            messages.success('Produto Salvo com Sucesso')
+            messages.success(request, 'Produto Salvo com Sucesso')
         else:
-            messages.error('Produto não salvo')
-    return render(request, 'produto.html')
+            messages.error(request,'Falha ao cadastrar produto')
+    else:
+        form = ProdutoModelForm()
+    context = {
+        "form": form
+    }
+    return render(request, 'produto.html', context)
