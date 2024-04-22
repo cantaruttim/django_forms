@@ -1,12 +1,12 @@
 {
   "build": {
-    "src": "api/manage.py",
+    "src": "django02/manage.py",
     "use": "@vercel/python"
   },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "api/manage.py"
+      "dest": "django02/manage.py"
     }
   ]
 }
