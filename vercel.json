@@ -1,19 +1,19 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "django02",
-      "use": "@vercel/python",
-      "config": {
-        "runtime": "python3.9"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "core/wsgi.py"
-    }
-  ],
+//  "version": 2,
+//  "builds": [
+//    {
+//      "src": "django02",
+//      "use": "@vercel/python",
+//      "config": {
+//        "runtime": "python3.9"
+//      }
+//    }
+//  ],
+//  "routes": [
+//    {
+//      "src": "/(.*)",
+//      "dest": "core/wsgi.py"
+//    }
+//  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/"}]
 }
