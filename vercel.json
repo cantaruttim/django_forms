@@ -1,13 +1,13 @@
 {
-  "build": {
-    "scripts": "Django==5.0.4",
-    "src": "django02/manage.py",
-    "use": "@vercel/python"
-  },
+  "builds": [{
+    "src": "django02/wsgi.py",
+    "use": "@vercel/python",
+    "config":{ "maxLambdaSize": "15mb", "runtime": "python3.9" }
+  }],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "django02/manage.py"
+      "dest": "django02/wsgi.py"
     }
   ]
 }
